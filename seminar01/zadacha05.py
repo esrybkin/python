@@ -3,10 +3,9 @@
 # - A (3,6); B (2,1) -> 5,09
 # - A (7,-5); B (1,-1) -> 7,21
 
-from cmath import sqrt
 x1 = int(input())
 y1 = int(input())
 x2 = int(input())
 y2 = int(input())
-rasst = sqrt((x2 - x1)**2 + (y2 - y1)**2)
-print(rasst)
+rasst = ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+print(f"Расстояние: {format(rasst, '.2f')}")
