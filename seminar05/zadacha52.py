@@ -7,7 +7,7 @@ from random import randint
 import os
 os.system("cls")
 
-kol_konfet = 99
+kol_konfet = 2021
 max_konf_za_hod = 28
 
 game = int(input('Выбери вариант: 1 - игра с человеком, 2 - игра с компьютером(игрок 1 -человек): '))
@@ -58,6 +58,8 @@ else:
             kol_konfet -= igrok1
         else:
             konf_pc = kol_konfet % (max_konf_za_hod + 1)
+            if konf_pc == 0:
+                konf_pc = randint(1,28)
             print(f'Компьютер берет {konf_pc}')
             if kol_konfet - konf_pc > 0:
                 hod = 1
