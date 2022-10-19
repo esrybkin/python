@@ -3,3 +3,5 @@ str = 'Напишите програабвмму, удаляющую иабвз 
 str = list(filter(lambda x: 'абв' not in x, str.split()))
 str = " ".join(str)
 print(str)
+
+# print(*filter(lambda x: "абв" not in x, text))
