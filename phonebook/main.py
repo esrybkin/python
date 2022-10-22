@@ -1,14 +1,12 @@
 from os.path import exists
+import save_read as sv
 import ui
-import save_read
-from save_read import creating
-from save_read import writing_scv
-from save_read import writing_txt
 
-path = 'Phonebook\Phonebook.csv'
+
+path = 'Phonebook.csv'
 valid = exists(path)
 if not valid:
-    creating()
-
-writing_scv()
-writing_txt()
+    sv.creating()
+sv.writing_scv()
+sv.writing_txt()
+ui.read_csv("Phonebook.csv")
